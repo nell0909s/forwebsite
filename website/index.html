@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hidesidebar()"><a href="#"><img src="close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                        alt=""></a></li>
+            <li> <a href="#">Account</a></li>
+            <li> <a href="#">Settings</a></li>
+            <li> <a href="#">Log out</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Disaster Aid</a></li>
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">Dashboard</a></li>
+            <li> <a href="#">about</a></li>
+            <li onclick="Register()"> <a href="#">Sign up</a></li>
+            <li onclick="Login()"><a href="#">Log in</a></li>
+
+            <li onclick="showsidebar()"><a href="#"><img src="menu_73dp_1F1F1F_FILL0_wght400_GRAD0_opsz48.svg"
+                        alt=""></a></li>
+
+        </ul>
+        <!-- Sigup form -->
+
+    </nav>
+    <div class="register-container" id="register">
+
+        <div class="top">
+            <span>Have an account? <a href="#" onclick="Login()">Login</a></span>
+            <Header>Sign up</Header>
+
+        </div>
+        <div class="two-forms">
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Firstname">
+                <i class="bx bx-user"></i>
+
+            </div>
+            <div class="input-box">
+                <input type="text " class="input-field" placeholder="Lastname">
+                <i class="bx bx-user"></i>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- log in form -->
+    <div class="login">
+        <div class="top">
+
+            <Header><h1><b>Log in</b></h1></Header>
+        </div>
+        <div>
+            <input type="text" class="input-field" placeholder="Username">
+            <i class="bx bx-user"></i>
+        </div>
+        <div class="paraPassword">
+            <input type="password" class="input-field" placeholder="Password">
+            <i class="bx bx-user"></i>
+        </div>
+        <div class="paraButton">
+            <button class="loginButton" height="50px" width="20px"><h1><b>Log in</b></h1></button>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function showsidebar() {
+            const showsidebar = document.querySelector('.sidebar')
+            showsidebar.style.display = 'flex'
+
+        }
+        function hidesidebar() {
+            const hidesidebar = document.querySelector('.sidebar')
+            hidesidebar.style.display = 'none'
+
+        }
+        function Register() {
+            const register = document.querySelector('#register')
+
+            register.style.display = 'none'
+            // if (register.style.display === 'none' || register.style.display === '') {
+            //     register.style.display = 'flex'; // or 'block'
+            // } else {
+            //     register.style.display = 'none';
+            // } 
+
+        }
+        function Login() {
+            const sidebar = document.querySelector('.login')
+            if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+                sidebar.style.display = 'flex'; // or 'block'
+            } else {
+                sidebar.style.display = 'none';
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
